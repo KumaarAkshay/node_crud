@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 // const { getMaxListeners } = require('./models/students');
 const dbconnection = require("./db/conn")
 const Student = require("./models/students")
@@ -15,6 +16,7 @@ const app = express()
 // app.set('view engine','ejs');
 
 const port = process.env.PORT || 3000;
+app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 

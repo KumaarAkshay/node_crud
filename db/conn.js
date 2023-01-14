@@ -4,7 +4,10 @@ const mongoose = require("mongoose")
 // const dbURI = "mongodb://127.0.0.1:27017/students-api";
 
 // Connection for mongodb atlas online
-const dbURI = `mongodb+srv://akshay-db:aks123456@cluster0.xxbhhvz.mongodb.net/student-db-api?retryWrites=true&w=majority`;
+const uname = "akshay-db";
+const pass = "aks123456";
+const dbname = "student-db-api";
+const dbURI = `mongodb+srv://${uname}:${pass}@cluster0.xxbhhvz.mongodb.net/${dbname}?retryWrites=true&w=majority`;
 
 
 mongoose.connect(dbURI,

@@ -3,7 +3,6 @@ const Student = require("../models/students")
 
 exports.allStudent = async(req,res)=>{
     try{
-      console.log("hello");
       const allStudent = await Student.find()
       res.status(201).send(allStudent);
     }catch(e){
@@ -36,6 +35,7 @@ exports.addStudent = async(req,res)=>{
       console.log(student);
       const createUser = await student.save()
         res.status(201).send(createUser);
+
     }catch(e){
       res.status(400).send(e);
     }
