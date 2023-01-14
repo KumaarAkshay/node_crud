@@ -3,6 +3,7 @@ const Student = require("../models/students")
 
 exports.allStudent = async(req,res)=>{
     try{
+      console.log("hello");
       const allStudent = await Student.find()
       res.status(201).send(allStudent);
     }catch(e){

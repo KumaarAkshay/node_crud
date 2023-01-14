@@ -1,6 +1,6 @@
 const express = require('express');
 // const { getMaxListeners } = require('./models/students');
-const dbconnection = require("./db/con")
+const dbconnection = require("./db/conn")
 const Student = require("./models/students")
 const studentRoutes = require('./routes/studentRoutes');
 const authRoutes = require('./routes/authRoutes');
