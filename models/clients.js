@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-//const validator = require("validator")
+const validator = require("validator")
 // const Schema = mongoose.Schema;
 
 
@@ -16,25 +16,26 @@ const clientSchema = new mongoose.Schema({
         requred :true,
         minlength : 3
     },
+
+    username : {
+        type : String,
+        requred :true,
+        minlength : 3,
+        unique : [true, "username must be unique present"]
+    },
     
     email : {
         type : String,
         requred : true,
         unique : [true, "Email id already present"],
-        // validate(value){
-        //     if(validator.isEmail(value)){
-        //         throw new Error("Invaild Email")
-        //     }
-        // }
+        validate(value){
+            if(!validator.isEmail(value)){
+                throw new Error("Invaild Email")
+            }
+        }
     },
 
-    phone : {
-        type : Number,
-        // min : 10,
-        // max : 10,
-        requred : true,
-        unique : true
-    },
+
     password : {
         type : String,
         requred : true,

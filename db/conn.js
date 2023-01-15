@@ -1,5 +1,6 @@
 const mongoose = require("mongoose")
 
+mongoose.set("strictQuery", false);
 // Connection for mongose on system
 // const dbURI = "mongodb://127.0.0.1:27017/students-api";
 

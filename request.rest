@@ -1,0 +1,36 @@
+GET http://localhost:3000/
+
+###
+GET http://localhost:3000/user
+
+###
+POST http://localhost:3000/student
+Content-Type: application/json
+
+{
+    "name" : "Akshay",
+    "email": "akshay@gmail.com",
+    "phone": "8979723313",
+    "address": "Sarsawa"
+}
+
+###
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+    "firstname" : "Akshat",
+    "lastname"  : "Singh" ,
+    "username"  : "dudu",
+    "email": "dudu@gmail.com",
+    "password": "Akshay@12"
+}
+
+###
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+    "firstname" : "Akshat",
+    "lastname"  : "Singh" 
+}

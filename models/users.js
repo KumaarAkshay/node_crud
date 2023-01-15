@@ -2,10 +2,11 @@ const mongoose = require("mongoose")
 
 const userSchema = new mongoose.Schema({
 
-    fullname : {
+    username : {
         type : String,
         requred :true,
-        minlength : 3
+        minlength : 3,
+        unique : [true, "username must be unique present"]
     },
     
     email : {
